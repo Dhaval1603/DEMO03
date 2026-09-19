@@ -1,0 +1,6 @@
+{
+  "name": "M M Design Atelier - Client Consultation Portal",
+  "description": "Premium customer requirement collection and architectural consultation portal for M M Design Atelier.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

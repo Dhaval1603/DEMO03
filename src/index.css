@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Brand Color Design Tokens */
+    --color-brand-red: #E22026;
+    --color-brand-red-hover: #C81A20;
+    --color-brand-red-light: rgba(226, 32, 38, 0.04);
+    --color-brand-red-tint: rgba(226, 32, 38, 0.08);
+    --color-brand-red-border: rgba(226, 32, 38, 0.35);
+
+    --color-black: #111111;
+    --color-black-soft: #1C1C1E;
+    --color-black-muted: #27272A;
+
+    --color-white: #FFFFFF;
+    --color-bg-base: #FAFAFB;
+    --color-bg-surface: #FFFFFF;
+    --color-bg-subtle: #F4F4F6;
+
+    --color-border-subtle: #E5E7EB;
+    --color-border-medium: #D1D5DB;
+
+    --color-text-primary: #111111;
+    --color-text-secondary: #52525B;
+    --color-text-tertiary: #71717A;
+    --color-text-muted: #A1A1AA;
+
+    --font-brand-serif: 'Cinzel', Georgia, serif;
+    --font-brand-geometric: 'Montserrat', system-ui, -apple-system, sans-serif;
+    --font-display: 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Centralized Architectural Classes */
+.font-brand-serif {
+  font-family: var(--font-brand-serif);
+}
+
+.font-brand-geometric {
+  font-family: var(--font-brand-geometric);
+}
+
+.brand-red {
+  color: var(--color-brand-red);
+}
+
+.bg-brand-red {
+  background-color: var(--color-brand-red);
+}
+
+.border-brand-red {
+  border-color: var(--color-brand-red);
+}
+
+/* Minimal Architectural Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F4F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Subtle transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
